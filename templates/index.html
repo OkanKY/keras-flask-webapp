@@ -1,0 +1,79 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="row">
+    <div class="col-sm-4">
+        <form id="upload-file-ResNet50" method="post" enctype="multipart/form-data">
+            <label for="imageUploadResNet50" class="upload-label">
+               ResNet50 Choose...
+            </label>
+            <input type="file" name="file" id="imageUploadResNet50" accept=".png, .jpg, .jpeg">
+        </form>
+
+        <div class="image-section-ResNet50" style="display:none;">
+            <div class="img-preview">
+                <div id="imagePreviewResNet50">
+                </div>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary btn-lg " id="btn-predict-ResNet50">ResNet50 Predict!</button>
+            </div>
+        </div>
+
+        <div class="loaderResNet50" style="display:none;"></div>
+
+        <h3 id="resultResNet50">
+            <span> </span>
+        </h3>
+    </div>
+    <div class="col-sm-4">
+        <form id="upload-file-VGG16" method="post" enctype="multipart/form-data">
+            <label for="imageUploadVGG16" class="upload-label">
+               VGG16 Choose...
+            </label>
+            <input type="file" name="file" id="imageUploadVGG16" accept=".png, .jpg, .jpeg">
+        </form>
+
+        <div class="image-section-VGG16" style="display:none;">
+            <div class="img-preview">
+                <div id="imagePreviewVGG16">
+                </div>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary btn-lg " id="btn-predict-VGG16">VGG16 Predict!</button>
+            </div>
+        </div>
+
+        <div class="loaderVGG16" style="display:none;"></div>
+
+        <h3 id="resultVGG16">
+            <span> </span>
+        </h3>
+    </div>
+
+    <div class="col-sm-4">
+        <form id="upload-file-Xception" method="post" enctype="multipart/form-data">
+            <label for="imageUploadXception" class="upload-label">
+               Xception Choose...
+            </label>
+            <input type="file" name="file" id="imageUploadXception" accept=".png, .jpg, .jpeg">
+        </form>
+
+        <div class="image-section-Xception" style="display:none;">
+            <div class="img-preview">
+                <div id="imagePreviewXception">
+                </div>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary btn-lg " id="btn-predict-Xception">Xception Predict!</button>
+            </div>
+        </div>
+
+        <div class="loaderXception" style="display:none;"></div>
+
+        <h3 id="resultXception">
+            <span> </span>
+        </h3>
+    </div>
+</div>
+
+{% endblock %}
